@@ -266,10 +266,12 @@ def strip_quoted_wrapping(res, fname=None, fence=None):
 
     res = res.splitlines()
 
-    if fname and res[0].strip().endswith(Path(fname).name):
+    # instead of res[1] it should be res[0] because it refers to the filename
+    if fname and res[1].strip().endswith(Path(fname).name):
         res = res[1:]
 
-    if res[0].startswith(fence[0]) and res[-1].startswith(fence[1]):
+    # instead of res[1] it should be res[0] because it refers to the the first """
+    if res[1].startswith(fence[0]) and res[-1].startswith(fence[1]):
         res = res[1:-1]
 
     res = "\n".join(res)
