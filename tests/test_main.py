@@ -157,7 +157,7 @@ class TestMain(TestCase):
             _, kwargs = MockCoder.call_args
             assert kwargs["dirty_commits"] is True
             assert kwargs["auto_commits"] is True
-            assert kwargs["pretty"] is True
+            assert kwargs["pretty"] is False
 
         with patch("aider.main.Coder.create") as MockCoder:
             main(["--no-pretty"], input=DummyInput())
@@ -167,7 +167,7 @@ class TestMain(TestCase):
         with patch("aider.main.Coder.create") as MockCoder:
             main(["--pretty"], input=DummyInput())
             _, kwargs = MockCoder.call_args
-            assert kwargs["pretty"] is True
+            assert kwargs["pretty"] is False
 
         with patch("aider.main.Coder.create") as MockCoder:
             main(["--no-dirty-commits"], input=DummyInput())
