@@ -33,7 +33,8 @@ class AutocompleteSystem(object):
             return []
         else:
             self.prefix.append(c)
-            if self.cur_trie_node is None or c not in self.cur_trie_node.children:
+            #if self.cur_trie_node is None or c not in self.cur_trie_node.children: ---> correct version
+            if c not in self.cur_trie_node.children: #---> incorrect
                 self.cur_trie_node = None
                 return []
             self.cur_trie_node = self.cur_trie_node.children[c]
