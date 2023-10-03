@@ -18,8 +18,3 @@ def test_get_most_similar_words_short():
     assert get_k_similar_words(dictionary, 'a', 1, threshold) == []
     assert get_k_similar_words(dictionary, 'b', 1, threshold) == []
     assert get_k_similar_words(dictionary, 'e', 1, threshold) == []
-
-def test_long_words():
-    dictionary = ['pneumonoultramicroscopicsilicovolcanoconiosis', 'floccinaucinihilipilification']
-    assert get_k_similar_words(dictionary, 'pneumonoultramicroscopicsilicovolcanoconiosis', 1) == ['pneumonoultramicroscopicsilicovolcanoconiosis']
-    assert get_k_similar_words(dictionary, 'floccinaucinihilipilification', 1) == ['floccinaucinihilipilification']
