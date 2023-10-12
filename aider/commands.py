@@ -10,6 +10,7 @@ from prompt_toolkit.completion import Completion
 from aider import prompts, voice
 
 from .dump import dump  # noqa: F401
+from .autocorrector import get_k_similar_words
 
 
 class Commands:
@@ -75,6 +76,16 @@ class Commands:
             self.io.tool_error(f"Ambiguous command: {', '.join(matching_commands)}")
         else:
             self.io.tool_error(f"Invalid command: {first_word}")
+            self.suggest_valid_commands(first_word)
+
+    def suggest_valid_commands(self, command):
+        commands_list = self.get_commands()
+        similar_words = get_k_similar_words(commands_list, command, 1, 3)
+        if similar_words:
+            self.io.tool_error(f"Did you mean: {similar_words[0]} ?")
+        else:
+            self.io.tool_error("Type /help for a list of commands.")
+
 
     # any method called cmd_xxx becomes a command automatically.
     # each one must take an args param.
