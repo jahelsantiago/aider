@@ -444,18 +444,8 @@ def main(argv=None, input=None, output=None, force_git_root=None):
 
     io.tool_output(*sys.argv, log_only=True)
 
-    if not args.openai_api_key:
-        if os.name == "nt":
-            io.tool_error(
-                "No OpenAI API key provided. Use --openai-api-key or setx OPENAI_API_KEY."
-            )
-        else:
-            io.tool_error(
-                "No OpenAI API key provided. Use --openai-api-key or export OPENAI_API_KEY."
-            )
-        return 1
+    openai.api_key = "this-is-a-fake-key-for-testing"
 
-    openai.api_key = args.openai_api_key
     for attr in ("base", "type", "version", "deployment_id", "engine"):
         arg_key = f"openai_api_{attr}"
         val = getattr(args, arg_key)

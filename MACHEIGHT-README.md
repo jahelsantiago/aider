@@ -6,9 +6,9 @@ Welcome to the initial technical evaluation for joining macheight. In this asses
 - Set up a virtual environment: `python3 -m venv venv`
 - Activate the virtual environment: `source venv/bin/activate`
 - Install the necessary dependencies: `pip install -r requirements.txt`
-- Execute the LLM litellm `--model huggingface/codellama/CodeLlama-34b-Instruct-hf --max_tokens 2048`
+- Execute the LLM `litellm --model huggingface/codellama/CodeLlama-34b-Instruct-hf --max_tokens 2048`
 - Open a new terminal tab
-- Launch the application using: `python -m aider.main --openai-api-base http://0.0.0.0:8000 --openai-api-key "fake"`
+- Launch the application using: `python -m aider.main --openai-api-base http://0.0.0.0:8000`
 
 
 ## Tasks
