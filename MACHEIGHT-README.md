@@ -34,16 +34,15 @@ When the user types a command that is not available, the application returns a r
 
 <img width="228" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/ffea2120-da3d-498b-9564-1df9e9f1cdc1">
 
+
 However, one of our users reported a strange behavior that you should check. Here are the steps to reproduce the bug state:
 
-    * Initially, start the application. You can refer to the [Run instructions](#Run).
-    * Once the application is running, write the command `/drop` and then the command `/clear`
-    * After doing this, input the command `/show-chat-history`, which makes the application hang for a few seconds and then shows the message:
+- Initially, start the application. You can refer to the [Run instructions](#Run).
+- Once the application is running, write the command `/drop` and then the command `/clear`
+- After doing this, input the command `/show-chat-history`, which makes the application hang for a few seconds and then shows the message:
     
-    ```bash
-    Invalid command: /show-chat-history
-    Type /help for a list of commands.
-    ```
+    <img width="316" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/f9db8ae6-0721-4763-9925-71af1d920a77">
+
 
    The unusual behavior is that the applications hang for more time when the invalid command `/show-chat-history` is typed compared with commands as `/close` or `/report` are entered.
     
