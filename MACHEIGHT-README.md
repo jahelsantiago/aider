@@ -22,13 +22,13 @@ We have made the following modifications to the source code:
 
 Aider supports commands from within the chat, which all start with /. Here are some of the most useful in-chat commands:
 
-/add <file>: Add matching files to the chat session.
-/drop <file>: Remove matching files from the chat session.
-/undo: Undo the last git commit if it was done by aider.
-/diff: Display the diff of the last aider commit.
-/run <command>: Run a shell command and optionally add the output to the chat.
-/voice: Speak to aider to request code changes with your voice.
-/help: Show help about all commands.
+* `/add <file>`: Add matching files to the chat session.
+* `/drop <file>`: Remove matching files from the chat session.
+* `/undo`: Undo the last git commit if it was done by aider.
+* `/diff`: Display the diff of the last aider commit.
+* `/run <command>`: Run a shell command and optionally add the output to the chat.
+* `/voice`: Speak to aider to [request code changes with your voice](https://aider.chat/docs/voice.html).
+* `/help`: Show help about all commands.
 
 When the user types a command that is not available, the application returns a recommendation with the command that is more similar to the one that the user typed. Example:
 
@@ -45,12 +45,14 @@ However, one of our users reported a strange behavior that you should check. Her
     Type /help for a list of commands.
     ```
 
-    The unusual behavior is observed when other invalid commands like `/close` or `/report` are entered. The application does not hang for as long as it does with the `/show-chat-history` command. 
+   The unusual behavior is that the applications hang for more time when the invalid command `/show-chat-history` is typed compared with commands as `/close` or `/report` are entered.
     
     Can you rectify this reported issue and fix it? 
 
+## Second task
 
-- [ ] Some of the unit tests are failing, your task is to run these tests and correct the ones that are failing.
+- Run the unit tests with `pytest`
+- Some of the  tests are failing, your task is to run these tests and correct the ones that are failing.
 
 
 
@@ -58,4 +60,4 @@ However, one of our users reported a strange behavior that you should check. Her
 ## Deliverables
 - [ ] Create one commit for each task. Upload a Pull request with your changes to the repository that was assigned to you.
 - [ ] Add a comment to the Pull request with the time you spent on the test.
-- [ ] Send us an email once it you are finished.
+- [ ] Send us an email once you are finished.
