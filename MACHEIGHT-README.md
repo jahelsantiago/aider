@@ -44,9 +44,9 @@ However, one of our users reported a strange behavior that you should check. Her
     <img width="316" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/f9db8ae6-0721-4763-9925-71af1d920a77">
 
 
-   The unusual behavior is that the applications hang for more time when the invalid command `/show-chat-history` is typed compared with commands as `/close` or `/report` are entered.
+The unusual behavior is that the applications hang for more time when the invalid command `/show-chat-history` is typed compared with commands as `/close` or `/report` are entered.
     
-    Can you rectify this reported issue and fix it? 
+Can you rectify this reported issue and fix it? 
 
 ## Second task
 
