@@ -48,40 +48,46 @@ Can you rectify this reported issue and fix it?
 
 ## Second task
 
-The `/add` command is used to add files to the chat session. The chat session is visible at the top of of the input. For example if I type `/add main.py` the chat session will show:
+The `/add` command is used to add files to the chat session. The chat session is visible at the top of the input. For example, if I type `/add hello.py` the chat session will show:
 
-REPLACE WITH IMAGE
+<img width="320" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/898d0437-3803-4ee7-b148-99dadf33d2af">
 
-It is also possible to add multiple files at once by typing them separated by a space `/add main.py utils.py` and the chat session will show:
+It is also possible to add multiple files at once by typing them separated by a space: `/add hello.py utils.py` and the chat session will show:
 
-REPLACE WITH IMAGE
+<img width="253" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/578832c7-4222-4e16-a64f-d5e9375590cc">
 
-If a folder is provided, it should add all the files in that folder and its sub-folders. For example given the structure:
+If a folder is provided, it should add all the files in that folder and its subfolders. For example, given the structure:
 
 ```bash
-- example
+- folder
     - text1.txt
     - text2.txt
     - subfolder1
         - text3.txt
-        - text4.txt
         - subfolder2
-            - text5.txt
-            - text6.txt
+            - text4.txt
 ```
 
-If I type `/add example` the chat session will show:
+If `/add example` is typed, the chat session should show:
 
-REPLACE WITH IMAGE
+<img width="864" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/ac9f204d-a1dc-46cf-9842-89de18909734">
 
-However, the application is not working as expected. When I type `/add example` the chat session shows:
+However, the application is not working as expected. When `/add folder` is typed, the chat session incorrectly shows:
 
-REPLACE WITH IMAGE
+<img width="217" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/3edad6ba-5fc8-4642-bc71-29b71da7e150">
+
+A similar case happens with wild cards. If `/add folder/*` is typed, It should show:
+
+<img width="868" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/61ac594b-f285-4820-b5fb-a2df4c829a6d">
+
+But instead, it shows:
+
+<img width="335" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/c8882e5a-9b3f-482e-b342-8ec1c74bb428">
+
 
 Can you fix this issue and make the application work as expected?
 
 
 ## Deliverables
 - [ ] Create one commit for each task. Upload a Pull request with your changes to the repository that was assigned to you.
-- [ ] Add a comment to the Pull request with the time you spent on the test.
 - [ ] Send us an email once you are finished.
