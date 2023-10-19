@@ -52,9 +52,10 @@ The `/add` command is used to add files to the chat session. The chat session is
 
 <img width="320" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/898d0437-3803-4ee7-b148-99dadf33d2af">
 
-It is also possible to add multiple files at once by typing them separated by a space: `/add hello.py utils.py` and the chat session will show:
+It is also possible to add multiple files at once by typing them separated by a space: `/add hello.py setup.py` and the chat session will show:
 
-<img width="253" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/578832c7-4222-4e16-a64f-d5e9375590cc">
+<img width="342" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/5d6edf87-2694-4565-8b1d-29d94d46434d">
+
 
 If a folder is provided, it should add all the files in that folder and its subfolders. For example, given the structure:
 
