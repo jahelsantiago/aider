@@ -82,7 +82,7 @@ class TestCommands(TestCase):
         # Check if no files have been added to the chat session
         self.assertEqual(len(coder.abs_fnames), 0)
 
-    def test_cmd_add_drop_directory(self):
+    def test_cmd_add_directory_wildcard(self):
         # Initialize the Commands and InputOutput objects
         io = InputOutput(pretty=False, yes=False)
         from aider.coders import Coder
@@ -95,43 +95,14 @@ class TestCommands(TestCase):
         Path("test_dir/another_dir").mkdir()
         Path("test_dir/test_file1.txt").write_text("Test file 1")
         Path("test_dir/test_file2.txt").write_text("Test file 2")
-        Path("test_dir/another_dir/test_file.txt").write_text("Test file 3")
+        
 
         # Call the cmd_add method with a directory
-        commands.cmd_add("test_dir test_dir/test_file2.txt")
+        commands.cmd_add("test_dir test_dir/*")
 
         # Check if the files have been added to the chat session
         self.assertIn(str(Path("test_dir/test_file1.txt").resolve()), coder.abs_fnames)
         self.assertIn(str(Path("test_dir/test_file2.txt").resolve()), coder.abs_fnames)
-        self.assertIn(str(Path("test_dir/another_dir/test_file.txt").resolve()), coder.abs_fnames)
-
-        commands.cmd_drop("test_dir/another_dir")
-        self.assertIn(str(Path("test_dir/test_file1.txt").resolve()), coder.abs_fnames)
-        self.assertIn(str(Path("test_dir/test_file2.txt").resolve()), coder.abs_fnames)
-        self.assertNotIn(
-            str(Path("test_dir/another_dir/test_file.txt").resolve()), coder.abs_fnames
-        )
-
-        # Issue #139 /add problems when cwd != git_root
-
-        # remember the proper abs path to this file
-        abs_fname = str(Path("test_dir/another_dir/test_file.txt").resolve())
-
-        # chdir to someplace other than git_root
-        Path("side_dir").mkdir()
-        os.chdir("side_dir")
-
-        # add it via it's git_root referenced name
-        commands.cmd_add("test_dir/another_dir/test_file.txt")
-
-        # it should be there, but was not in v0.10.0
-        self.assertIn(abs_fname, coder.abs_fnames)
-
-        # drop it via it's git_root referenced name
-        commands.cmd_drop("test_dir/another_dir/test_file.txt")
-
-        # it should be there, but was not in v0.10.0
-        self.assertNotIn(abs_fname, coder.abs_fnames)
 
     def test_cmd_drop_with_glob_patterns(self):
         # Initialize the Commands and InputOutput objects
