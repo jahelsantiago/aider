@@ -259,20 +259,13 @@ class Commands:
                 yield Completion(fname, start_position=-len(partial))
 
     def glob_filtered_to_repo(self, pattern):
-        print("glob_filtered_to_repo")
-        print(pattern)
         raw_matched_files = list(Path(self.coder.root).glob(pattern))
-        print("raw_matched_files", raw_matched_files)
 
         matched_files = []
         for fn in raw_matched_files:
             matched_files += expand_subdir(fn)
 
-        print("matched_files", matched_files)
-
         matched_files = [str(Path(fn).relative_to(self.coder.root)) for fn in matched_files]
-
-        print("matched_files", matched_files)
 
         # if repo, filter against it
         if self.coder.repo:
