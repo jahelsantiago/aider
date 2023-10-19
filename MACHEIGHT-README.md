@@ -50,7 +50,7 @@ Can you rectify this reported issue and fix it?
 
 ## Second task
 
-The `/add` command is used to add files to the chat session. The chat session is visible at the top of the input. For example, if I type `/add hello.py` the chat session will show:
+The `/add` command is used to add files to the chat session. The chat session is visible at the top of the input. For example, if `/add hello.py` is typed, the chat session will show:
 
 <img width="320" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/898d0437-3803-4ee7-b148-99dadf33d2af">
 
