@@ -1,3 +1,5 @@
+# Macheight technical challenge
+
 Welcome to the initial technical evaluation for joining macheight. In this assessment, we expect you to showcase your debugging proficiency, ability to write clean code, and your expertise in algorithms and data structures.
 
 For this test, we have taken an open-source project. This project is a pair programming AIDER powered by LLM that helps you write code with simple instructions in natural language. You can Refer to the official documentation here: [AIDER](https://aider.chat/)
@@ -69,7 +71,7 @@ If a folder is provided, it should add all the files in that folder and its subf
             - text4.txt
 ```
 
-If `/add example` is typed, the chat session should show:
+If `/add folder` is typed, the chat session should show all the files in the directory folder and its subfolders:
 
 <img width="864" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/ac9f204d-a1dc-46cf-9842-89de18909734">
 
@@ -77,14 +79,14 @@ However, the application is not working as expected. When `/add folder` is typed
 
 <img width="217" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/3edad6ba-5fc8-4642-bc71-29b71da7e150">
 
-A similar case happens with wild cards. If `/add folder/*` is typed, It should show:
+A similar case happens with wild cards. If `/add folder/*` is typed, It should add all the files in the folders and subfolders:
 
-<img width="868" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/61ac594b-f285-4820-b5fb-a2df4c829a6d">
+<img width="878" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/13f0e3e9-0a7a-4c3b-991b-fc672020467b">
+
 
 But instead, it shows:
 
 <img width="335" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/c8882e5a-9b3f-482e-b342-8ec1c74bb428">
-
 
 Can you fix this issue and make the application work as expected?
 
