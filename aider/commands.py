@@ -495,24 +495,13 @@ class Commands:
         return text
 
 
-# def expand_subdir(file_path):
-#     file_path = Path(file_path)
-#     if file_path.is_file():
-#         yield file_path
-#         return
-
-#     if file_path.is_dir():
-#         for file in file_path.rglob("*"):
-#             if file.is_file():
-#                 yield str(file)
-
-
 def expand_subdir(file_path):
     file_path = Path(file_path)
     files = []
+    if file_path.is_dir():
+        for subdir_path in file_path.iterdir():
+            expand_subdir(subdir_path)
     if file_path.is_file():
         files.append(file_path)
-    elif file_path.is_dir():
-        for item in file_path.iterdir():
-            files.extend(expand_subdir(item))
     return files
+

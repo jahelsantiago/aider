@@ -34,26 +34,51 @@ When the user types a command that is not available, the application returns a r
 
 <img width="228" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/ffea2120-da3d-498b-9564-1df9e9f1cdc1">
 
-
 However, one of our users reported a strange behavior that you should check. Here are the steps to reproduce the bug state:
 
 - Initially, start the application. You can refer to the [Run instructions](#Run).
 - Once the application is running, write the command `/drop` and then the command `/clear`
 - After doing this, input the command `/show-chat-history`, which makes the application hang for a few seconds and then shows the message:
-    
+
     <img width="316" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/f9db8ae6-0721-4763-9925-71af1d920a77">
 
-
 The unusual behavior is that the applications hang for more time when the invalid command `/show-chat-history` is typed compared with commands as `/close` or `/report` are entered.
-    
+
 Can you rectify this reported issue and fix it? 
 
 ## Second task
 
-- Run the unit tests with `pytest`
-- Some of the  tests are failing, your task is to run these tests and correct the ones that are failing.
+The `/add` command is used to add files to the chat session. The chat session is visible at the top of of the input. For example if I type `/add main.py` the chat session will show:
 
+REPLACE WITH IMAGE
 
+It is also possible to add multiple files at once by typing them separated by a space `/add main.py utils.py` and the chat session will show:
+
+REPLACE WITH IMAGE
+
+If a folder is provided, it should add all the files in that folder and its sub-folders. For example given the structure:
+
+```bash
+- example
+    - text1.txt
+    - text2.txt
+    - subfolder1
+        - text3.txt
+        - text4.txt
+        - subfolder2
+            - text5.txt
+            - text6.txt
+```
+
+If I type `/add example` the chat session will show:
+
+REPLACE WITH IMAGE
+
+However, the application is not working as expected. When I type `/add example` the chat session shows:
+
+REPLACE WITH IMAGE
+
+Can you fix this issue and make the application work as expected?
 
 
 ## Deliverables
