@@ -75,10 +75,10 @@ class Commands:
         elif len(matching_commands) > 1:
             self.io.tool_error(f"Ambiguous command: {', '.join(matching_commands)}")
         else:
-            self.io.tool_error(f"Invalid command: {first_word}")
             self.suggest_valid_commands(first_word)
 
     def suggest_valid_commands(self, command):
+        self.io.tool_error(f"Invalid command: {command}")
         commands_list = self.get_commands()
         similar_words = get_k_similar_words(commands_list, command, 1, 3)
         if similar_words:
@@ -259,13 +259,20 @@ class Commands:
                 yield Completion(fname, start_position=-len(partial))
 
     def glob_filtered_to_repo(self, pattern):
+        print("glob_filtered_to_repo")
+        print(pattern)
         raw_matched_files = list(Path(self.coder.root).glob(pattern))
+        print("raw_matched_files", raw_matched_files)
 
         matched_files = []
         for fn in raw_matched_files:
             matched_files += expand_subdir(fn)
 
+        print("matched_files", matched_files)
+
         matched_files = [str(Path(fn).relative_to(self.coder.root)) for fn in matched_files]
+
+        print("matched_files", matched_files)
 
         # if repo, filter against it
         if self.coder.repo:
@@ -488,13 +495,24 @@ class Commands:
         return text
 
 
+# def expand_subdir(file_path):
+#     file_path = Path(file_path)
+#     if file_path.is_file():
+#         yield file_path
+#         return
+
+#     if file_path.is_dir():
+#         for file in file_path.rglob("*"):
+#             if file.is_file():
+#                 yield str(file)
+
+
 def expand_subdir(file_path):
     file_path = Path(file_path)
+    files = []
     if file_path.is_file():
-        yield file_path
-        return
-
-    if file_path.is_dir():
-        for file in file_path.rglob("*"):
-            if file.is_file():
-                yield str(file)
+        files.append(file_path)
+    elif file_path.is_dir():
+        for item in file_path.iterdir():
+            files.extend(expand_subdir(item))
+    return files
