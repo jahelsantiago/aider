@@ -46,7 +46,7 @@ However, one of our users reported a strange behavior that you should check. Her
 
 The unusual behavior is that the applications hang for more time when the invalid command `/show-chat-history` is typed compared with commands as `/close` or `/report` are entered.
 
-Can you rectify this reported issue and fix it? 
+Rectify the reported issue and fix it.
 
 ## Second task
 
@@ -88,7 +88,13 @@ But instead, it shows:
 
 <img width="335" alt="image" src="https://github.com/jahelsantiago/aider/assets/47577344/c8882e5a-9b3f-482e-b342-8ec1c74bb428">
 
-Can you fix this issue and make the application work as expected?
+Rectify the reported issue and fix it.
+
+
+## Evaluation Criteria
+- Finding and solving the bugs
+- Written tests around the solutions implemented
+- Quality and readability of code
 
 
 ## Deliverables
