@@ -98,5 +98,5 @@ Rectify the reported issue and fix it.
 
 
 ## Deliverables
-- [ ] reate one pull request for each task, i.e., there should be 2 pull requests in total
+- [ ] Create one pull request for each task, i.e., there should be 2 pull requests in total
 - [ ] Send us an email once you are finished.
