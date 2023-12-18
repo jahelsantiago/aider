@@ -98,5 +98,5 @@ Rectify the reported issue and fix it.
 
 
 ## Deliverables
-- [ ] Create one commit for each task. Upload a Pull request with your changes to the repository that was assigned to you.
+- [ ] reate one pull request for each task, i.e., there should be 2 pull requests in total
 - [ ] Send us an email once you are finished.
