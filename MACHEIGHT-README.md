@@ -8,7 +8,7 @@ We have made the following modifications to the source code:
 - Added a proxy so you do not have to use an OpenAI API key.
 
 ## Installation Instructions
-- Begin by cloning this repository: `git clone https://github.com/jahelsantiago/aider.git`
+- Begin by cloning this repository: `git clone <link-to-the-repo>`
 - Establish a new branch with your name: `git checkout -b <your-name>`
 - Set up a virtual environment: `python3 -m venv venv`
 - Activate the virtual environment: `source venv/bin/activate`
@@ -16,8 +16,8 @@ We have made the following modifications to the source code:
 
 ## Run instructions 
 - Execute the LLM proxy `litellm --model huggingface/codellama/CodeLlama-34b-Instruct-hf --max_tokens 2048`
-- Open a new terminal tab
-- Launch the application using: `python -m aider.main --openai-api-base http://0.0.0.0:8000`
+- Open a new terminal tab and start the virtual enviroment `python3 -m venv venv`
+- Launch the application using: `python3 -m aider.main --openai-api-base http://0.0.0.0:8000`
 
 
 ## First task
