@@ -9,14 +9,13 @@ We have made the following modifications to the source code:
 
 ## Installation Instructions
 - Begin by cloning this repository: `git clone <link-to-the-repo>`
-- Establish a new branch with your name: `git checkout -b <your-name>`
 - Set up a virtual environment: `python3 -m venv venv`
 - Activate the virtual environment: `source venv/bin/activate`
 - Install the necessary dependencies: `pip install -r requirements.txt`
 
 ## Run instructions 
 - Execute the LLM proxy `litellm --model huggingface/codellama/CodeLlama-34b-Instruct-hf --max_tokens 2048`
-- Open a new terminal tab and start the virtual enviroment `python3 -m venv venv`
+- Open a new terminal tab and start the virtual enviroment `source venv/bin/activate`
 - Launch the application using: `python3 -m aider.main --openai-api-base http://0.0.0.0:8000`
 
 
