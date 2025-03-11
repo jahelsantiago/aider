@@ -64,7 +64,7 @@ venv\Scripts\activate
 ```
 **5. Launch the application:**
 ```bash
-python3 -m aider.main --openai-api-base http://0.0.0.0:8000`
+python3.10 -m aider.main --openai-api-base http://0.0.0.0:8000`
 ```
 
 ## First task
