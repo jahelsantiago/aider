@@ -32,10 +32,36 @@ pip install -r requirements.txt`
 ```
 
 ## Run instructions 
-- Execute the LLM proxy `litellm --model huggingface/codellama/CodeLlama-34b-Instruct-hf --max_tokens 2048`
-- Open a new terminal tab and start the virtual enviroment `source venv/bin/activate`
-- Launch the application using: `python3 -m aider.main --openai-api-base http://0.0.0.0:8000`
+**1. Activate the virtual environment.**
 
+On linux/Mac:
+```bash
+source venv/bin/activate
+```
+On windows:
+```bash
+venv\Scripts\activate
+```
+**2. Execute the LLM proxy**
+```bash
+litellm --model huggingface/codellama/CodeLlama-34b-Instruct-hf --max_tokens 2048
+```
+**3. Open a new terminal tab.**
+
+**4. Activate the virtual enviroment.**
+
+On linux/Mac:
+```bash
+source venv/bin/activate
+```
+On windows:
+```bash
+venv\Scripts\activate
+```
+**5. Launch the application:**
+```bash
+   python3 -m aider.main --openai-api-base http://0.0.0.0:8000`
+```
 
 ## First task
 
