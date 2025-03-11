@@ -8,10 +8,28 @@ We have made the following modifications to the source code:
 - Added a proxy so you do not have to use an OpenAI API key.
 
 ## Installation Instructions
-- Begin by cloning this repository: `git clone <link-to-the-repo>`
-- Set up a virtual environment: `python3 -m venv venv`
-- Activate the virtual environment: `source venv/bin/activate`
-- Install the necessary dependencies: `pip install -r requirements.txt`
+1. **Clone therepository:**
+```bash
+git clone <link-to-the-repo>
+```
+2.**Set up a virtual environment using Python 3.10**
+```bash
+`python3 -m venv venv`
+```
+3.**Activate the virtual environment:** 
+
+On linux/Mac:
+```bash
+source venv/bin/activate
+```
+On windows:
+```bash
+venv\Scripts\activate
+```
+4. **Install the necessary dependencies:** 
+```bash
+pip install -r requirements.txt`
+```
 
 ## Run instructions 
 - Execute the LLM proxy `litellm --model huggingface/codellama/CodeLlama-34b-Instruct-hf --max_tokens 2048`
@@ -97,5 +115,5 @@ Rectify the reported issue and fix it.
 
 
 ## Deliverables
-- [ ] Create one pull request for each task, i.e., there should be 2 pull requests in total
+- [ ] Create one pull request for each task, (there should be 2 pull requests in total one for the first task and another for the second task)
 - [ ] Send us an email once you are finished.
