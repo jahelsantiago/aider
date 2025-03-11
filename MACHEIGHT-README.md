@@ -14,7 +14,7 @@ git clone <link-to-the-repo>
 ```
 2.**Set up a virtual environment using Python 3.10**
 ```bash
-`python3 -m venv venv`
+python3 -m venv venv
 ```
 3.**Activate the virtual environment:** 
 
@@ -28,7 +28,7 @@ venv\Scripts\activate
 ```
 4. **Install the necessary dependencies:** 
 ```bash
-pip install -r requirements.txt`
+pip install -r requirements.txt
 ```
 
 ## Run instructions 
@@ -60,7 +60,7 @@ venv\Scripts\activate
 ```
 **5. Launch the application:**
 ```bash
-   python3 -m aider.main --openai-api-base http://0.0.0.0:8000`
+python3 -m aider.main --openai-api-base http://0.0.0.0:8000`
 ```
 
 ## First task
