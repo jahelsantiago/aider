@@ -8,15 +8,19 @@ We have made the following modifications to the source code:
 - Added a proxy so you do not have to use an OpenAI API key.
 
 ## Installation Instructions
-1. **Clone therepository:**
+**0. Download and install python3.10.10**:
+
+This is imperative for the repository to run. https://www.python.org/downloads/release/python-31010/
+
+**1. Clone therepository:**
 ```bash
 git clone <link-to-the-repo>
 ```
-2.**Set up a virtual environment using Python 3.10**
+**2. Set up a virtual environment using Python 3.10**
 ```bash
-python3 -m venv venv
+python3.10 -m venv venv
 ```
-3.**Activate the virtual environment:** 
+**3. Activate the virtual environment:** 
 
 On linux/Mac:
 ```bash
@@ -26,7 +30,7 @@ On windows:
 ```bash
 venv\Scripts\activate
 ```
-4. **Install the necessary dependencies:** 
+**4. Install the necessary dependencies:** 
 ```bash
 pip install -r requirements.txt
 ```
