@@ -8,9 +8,9 @@ We have made the following modifications to the source code:
 - Added a proxy so you do not have to use an OpenAI API key.
 
 ## Installation Instructions
-**0. Download and install python3.10.10**:
+**0. Download and install python3.13**:
 
-This is imperative for the repository to run. https://www.python.org/downloads/release/python-31010/
+This code runs on python 3.13
 
 **1. Clone therepository:**
 ```bash
@@ -18,7 +18,7 @@ git clone <link-to-the-repo>
 ```
 **2. Set up a virtual environment using Python 3.10**
 ```bash
-python3.10 -m venv venv
+python3.13 -m venv venv
 ```
 **3. Activate the virtual environment:** 
 
@@ -64,7 +64,7 @@ venv\Scripts\activate
 ```
 **5. Launch the application:**
 ```bash
-python3.10 -m aider.main --openai-api-base http://0.0.0.0:8000`
+python3.13 -m aider.main --openai-api-base http://0.0.0.0:8000
 ```
 
 ## First task
